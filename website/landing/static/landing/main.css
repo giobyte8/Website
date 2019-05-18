@@ -1,0 +1,13 @@
+/*noinspection CssUnknownTarget*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Oswald&display=swap');
+
+/**********************************************/
+/** Global styles */
+
+html, body {
+    font-family: 'Open Sans', "San Francisco Display", "Calibri", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Oswald', sans-serif;
+}
