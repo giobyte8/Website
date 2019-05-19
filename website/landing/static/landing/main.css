@@ -13,6 +13,19 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Raleway', sans-serif;
 }
 
+/**********************************************/
+/** Navbar */
+
+.navbar {
+    background: #FFFFFF;
+}
+
+.navbar .nav-link {
+    font-size: 1.1rem;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+}
+
 
 /**********************************************/
 /** Presentation card */
@@ -38,16 +51,54 @@ h1, h2, h3, h4, h5, h6 {
 .presentation-card a {
     color: #000;
 }
+
+.presentation-card a:hover {
+    text-decoration: none;
+}
+
 .presentation-card a > span {
     color: #000;
     font-size: 1.1em;
 }
+
+
+/**********************************************/
+/** Footer */
+
+.footer {
+    background: #323232;
+    color: #FAFAFA;
+    margin-top: 56px;
+}
+
+.footer .footer-link {
+    color: #D0D0D0;
+    /*display: block;*/
+    margin: 0 8px;
+    padding: 4px;
+}
+
+.footer .footer-link:hover {
+    text-decoration: none;
+}
+
+.footer .footer-link.active {
+    color: #FFFFFF;
+}
+
 
 @media screen and (max-width: 991px) {
     .presentation-card {
         /*border: 1px solid black;*/
         margin: 32px 8px;
         padding: 8px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .footer .footer-link {
+        display: block;
+        padding: 12px 4px;
     }
 }
 

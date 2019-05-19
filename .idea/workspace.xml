@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4f7c926f-d63e-439d-818e-24a76fe7ac3d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/website/landing/static/landing/profile.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/website/landing/templates/components/presentation_card.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/giovanni.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/giovanni.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website/landing/templates/components/footer.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/website/landing/static/landing/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/website/landing/static/landing/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/website/landing/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/website/landing/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/website/landing/templates/components/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/website/landing/templates/components/navbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/website/landing/templates/index/_what_ami_looking.html" beforeDir="false" afterPath="$PROJECT_DIR$/website/landing/templates/index/_what_ami_looking.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/website/landing/templates/index/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/website/landing/templates/index/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,19 +37,37 @@
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/website/landing/templates/index/index.html">
+            <entry file="file://$PROJECT_DIR$/website/landing/templates/base.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state>
-                  <caret column="14" selection-start-column="14" selection-end-column="14" />
+                <state relative-caret-position="262">
+                  <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/website/landing/templates/index/index.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="100">
+                  <caret line="5" column="14" lean-forward="true" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/website/landing/templates/components/footer.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="180">
+                  <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/website/landing/templates/components/presentation_card.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="500">
-                  <caret line="25" column="45" lean-forward="true" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
+                <state relative-caret-position="540">
+                  <caret line="27" column="37" lean-forward="true" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
                   <folding>
                     <element signature="e#703#709#0#HTML" expanded="true" />
                     <element signature="e#528#534#0#HTML" expanded="true" />
@@ -74,11 +89,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/website/landing/templates/components/navbar.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="160">
-                  <caret line="11" column="11" lean-forward="true" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+                <state>
+                  <caret column="48" lean-forward="true" selection-start-column="48" selection-end-column="48" />
                 </state>
               </provider>
             </entry>
@@ -111,8 +126,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/website/landing/static/landing/main.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="777">
-                  <caret line="59" column="25" selection-start-line="59" selection-start-column="25" selection-end-line="59" selection-end-column="25" />
+                <state relative-caret-position="260">
+                  <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
                 </state>
               </provider>
             </entry>
@@ -154,11 +169,12 @@
         <option value="$PROJECT_DIR$/website/landing/templates/blog/index.html" />
         <option value="$PROJECT_DIR$/website/landing/templates/portfolio/side_projects.html" />
         <option value="$PROJECT_DIR$/website/landing/views.py" />
-        <option value="$PROJECT_DIR$/website/landing/templates/index/index.html" />
-        <option value="$PROJECT_DIR$/website/landing/templates/base.html" />
-        <option value="$PROJECT_DIR$/website/landing/templates/components/navbar.html" />
         <option value="$PROJECT_DIR$/website/landing/templates/index/_what_ami_looking.html" />
         <option value="$PROJECT_DIR$/website/landing/templates/components/presentation_card.html" />
+        <option value="$PROJECT_DIR$/website/landing/templates/base.html" />
+        <option value="$PROJECT_DIR$/website/landing/templates/components/footer.html" />
+        <option value="$PROJECT_DIR$/website/landing/templates/index/index.html" />
+        <option value="$PROJECT_DIR$/website/landing/templates/components/navbar.html" />
         <option value="$PROJECT_DIR$/website/landing/static/landing/main.css" />
       </list>
     </option>
@@ -319,7 +335,7 @@
       <option name="presentableId" value="Default" />
       <updated>1558218133556</updated>
       <workItem from="1558218136324" duration="4208000" />
-      <workItem from="1558222480726" duration="10268000" />
+      <workItem from="1558222480726" duration="12824000" />
     </task>
     <task id="LOCAL-00001" summary=":rocket: Basic layout structure">
       <created>1558221482283</created>
@@ -342,11 +358,25 @@
       <option name="project" value="LOCAL" />
       <updated>1558226551728</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary=":rocket: Add presentation card to landing and contact links">
+      <created>1558233517391</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1558233517391</updated>
+    </task>
+    <task id="LOCAL-00005" summary=":rocket: Fix title">
+      <created>1558233594854</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1558233594854</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14476000" />
+    <option name="totallyTimeSpent" value="17032000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="30" width="1920" height="1050" extended-state="6" />
@@ -384,7 +414,9 @@
     <MESSAGE value=":rocket: Basic layout structure" />
     <MESSAGE value=":rocket: Brief of landing" />
     <MESSAGE value=":rocket: Basic structure and navigation flow" />
-    <option name="LAST_COMMIT_MESSAGE" value=":rocket: Basic structure and navigation flow" />
+    <MESSAGE value=":rocket: Add presentation card to landing and contact links" />
+    <MESSAGE value=":rocket: Fix title" />
+    <option name="LAST_COMMIT_MESSAGE" value=":rocket: Fix title" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/website/website/views.py" />
@@ -443,13 +475,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/website/landing/templates/components/navbar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="11" column="11" lean-forward="true" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/website/landing/templates/index/_what_ami_looking.html">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -464,31 +489,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/website/landing/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/website/landing/templates/index/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="14" selection-start-column="14" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/website/landing/static/landing/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="777">
-          <caret line="59" column="25" selection-start-line="59" selection-start-column="25" selection-end-line="59" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/website/landing/templates/components/presentation_card.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="25" column="45" lean-forward="true" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
+        <state relative-caret-position="540">
+          <caret line="27" column="37" lean-forward="true" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
           <folding>
             <element signature="e#703#709#0#HTML" expanded="true" />
             <element signature="e#528#534#0#HTML" expanded="true" />
@@ -506,6 +510,41 @@
             <element signature="e#1401#1407#0#HTML" expanded="true" />
             <element signature="e#1407#1413#0#HTML" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/landing/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/landing/templates/components/footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/landing/templates/index/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="23" column="15" lean-forward="true" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/landing/templates/components/navbar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="48" lean-forward="true" selection-start-column="48" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/landing/static/landing/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
         </state>
       </provider>
     </entry>
