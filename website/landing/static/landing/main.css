@@ -5,6 +5,7 @@
 /** Global styles */
 
 html, body {
+    background: #EFEFEF;
     font-family: 'Open Sans', "San Francisco Display", "Calibri", sans-serif;
 }
 

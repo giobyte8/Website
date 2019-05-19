@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+  <title>Side projects</title>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+        <blockquote class="blockquote">
+          You can not to know everything, every time. To make software requires
+          a lot of hard work and discipline.
+        </blockquote>
+      </div>
+
+    <div class="col-12 text-justify">
+      <h1>Side projects</h1>
+      <p>
+        During my career I had the opportunity to work with multiple technology
+        stacks, I’ve been creating enterprise systems, apps and internal tools mainly with
+        Javascript, Java, Laravel, Docker, Python, Swift and another langs/technologies.
+      </p>
+
+      <p>
+        Apart of the projects created for client/enterprises where i had worked you can
+        check my public side projects on my
+        <a href="https://github.com/DiganmeGiovanni">Github account</a>.
+      </p>
+
+      <p>
+        Also you can check the repositories with basic introductions and exercises that
+        i created for a few of the technologies when
+        <a href="{% url 'learning' %}">i started to learn it</a>.
+      </p>
+    </div>
+  </div>
+</div>
+{% endblock %}

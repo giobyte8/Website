@@ -13,18 +13,48 @@
 
   <div class="collapse navbar-collapse" id="main-navbar">
     <ul class="navbar-nav ml-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">About me</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Side projects</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Continuous learning</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Blog</a>
-      </li>
+
+      {% if nav_active == 'index' %}
+        <li class="nav-item active">
+          <a class="nav-link" href="#">About me</a>
+        </li>
+      {% else %}
+        <li class="nav-item">
+          <a class="nav-link" href={% url 'index' %}#">About me</a>
+        </li>
+      {% endif %}
+
+      {% if nav_active == 'portfolio' %}
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Side projects</a>
+        </li>
+      {% else %}
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'portfolio' %}">Side projects</a>
+        </li>
+      {% endif %}
+
+      {% if nav_active == 'learning' %}
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Continuous learning</a>
+        </li>
+      {% else %}
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'learning' %}">
+            Continuous learning
+          </a>
+        </li>
+      {% endif %}
+
+      {% if nav_active == 'blog' %}
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Blog</a>
+        </li>
+      {% else %}
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'blog' %}">Blog</a>
+        </li>
+      {% endif %}
     </ul>
   </div>
   </div>
