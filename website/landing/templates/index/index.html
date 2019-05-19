@@ -9,14 +9,18 @@
 <div class="container">
 
 <div class="row">
-  <div class="col-12 col-md-10 offset-md-1 text-justify">
+  <div class="col-12 col-lg-10 offset-lg-1">
 
     <div class="row">
       <div class="col-12">
+        {% include "components/presentation_card.html" %}
+      </div>
+
+      <div class="col-12 text-justify">
         {% include "index/_career_overview.html" %}
       </div>
 
-      <div class="col-12 mt-4">
+      <div class="col-12 mt-4 text-justify">
         {% include "index/_what_ami_looking.html" %}
       </div>
     </div>

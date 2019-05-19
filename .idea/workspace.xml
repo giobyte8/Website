@@ -2,15 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4f7c926f-d63e-439d-818e-24a76fe7ac3d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/website/landing/templates/blog/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/website/landing/templates/portfolio/continuous_learning.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/website/landing/templates/portfolio/side_projects.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website/landing/static/landing/profile.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website/landing/templates/components/presentation_card.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dictionaries/giovanni.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/giovanni.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/website/landing/static/landing/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/website/landing/static/landing/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/landing/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/website/landing/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/website/landing/templates/components/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/website/landing/templates/components/navbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/website/landing/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/website/landing/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/website/landing/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/website/landing/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/landing/templates/index/_what_ami_looking.html" beforeDir="false" afterPath="$PROJECT_DIR$/website/landing/templates/index/_what_ami_looking.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/landing/templates/index/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/website/landing/templates/index/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,46 +40,45 @@
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/website/landing/views.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="280">
-                  <caret line="14" column="6" lean-forward="true" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/website/landing/templates/index/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="280">
-                  <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/website/landing/templates/portfolio/side_projects.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="340">
-                  <caret line="17" column="23" lean-forward="true" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/website/landing/templates/blog/index.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="200">
-                  <caret line="10" column="17" lean-forward="true" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+                <state>
+                  <caret column="14" selection-start-column="14" selection-end-column="14" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/website/landing/templates/components/presentation_card.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="500">
+                  <caret line="25" column="45" lean-forward="true" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
+                  <folding>
+                    <element signature="e#703#709#0#HTML" expanded="true" />
+                    <element signature="e#528#534#0#HTML" expanded="true" />
+                    <element signature="e#534#540#0#HTML" expanded="true" />
+                    <element signature="e#540#546#0#HTML" expanded="true" />
+                    <element signature="e#741#747#1#HTML" expanded="true" />
+                    <element signature="e#747#753#0#HTML" expanded="true" />
+                    <element signature="e#753#759#0#HTML" expanded="true" />
+                    <element signature="e#769#775#0#HTML" expanded="true" />
+                    <element signature="e#775#781#0#HTML" expanded="true" />
+                    <element signature="e#1079#1085#0#HTML" expanded="true" />
+                    <element signature="e#1085#1091#0#HTML" expanded="true" />
+                    <element signature="e#1244#1250#0#HTML" expanded="true" />
+                    <element signature="e#1250#1256#0#HTML" expanded="true" />
+                    <element signature="e#1401#1407#0#HTML" expanded="true" />
+                    <element signature="e#1407#1413#0#HTML" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/website/landing/templates/components/navbar.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="531">
-                  <caret line="50" column="37" selection-start-line="50" selection-start-column="37" selection-end-line="50" selection-end-column="37" />
+                <state relative-caret-position="160">
+                  <caret line="11" column="11" lean-forward="true" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
                 </state>
               </provider>
             </entry>
@@ -92,12 +91,12 @@
             <entry file="file://$PROJECT_DIR$/website/landing/templates/index/index.html">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="380">
-                  <caret line="19" column="15" lean-forward="true" selection-end-line="26" />
+                  <caret line="23" column="15" lean-forward="true" selection-end-line="30" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/website/landing/urls.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="140">
@@ -109,11 +108,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/website/landing/static/landing/main.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="140">
-                  <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+                <state relative-caret-position="777">
+                  <caret line="59" column="25" selection-start-line="59" selection-start-column="25" selection-end-line="59" selection-end-column="25" />
                 </state>
               </provider>
             </entry>
@@ -129,6 +128,11 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>text-sm-center</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -142,18 +146,20 @@
         <option value="$PROJECT_DIR$/website/website/views.py" />
         <option value="$PROJECT_DIR$/website/website/settings.py" />
         <option value="$PROJECT_DIR$/website/website/urls.py" />
-        <option value="$PROJECT_DIR$/website/landing/templates/base.html" />
         <option value="$PROJECT_DIR$/website/landing/templates/index.html" />
         <option value="$PROJECT_DIR$/website/landing/templates/_career_overview.html" />
         <option value="$PROJECT_DIR$/website/landing/templates/_what_ami_looking.html" />
-        <option value="$PROJECT_DIR$/website/landing/static/landing/main.css" />
         <option value="$PROJECT_DIR$/website/landing/templates/portfolio/continuous_learning.html" />
         <option value="$PROJECT_DIR$/website/landing/urls.py" />
         <option value="$PROJECT_DIR$/website/landing/templates/blog/index.html" />
-        <option value="$PROJECT_DIR$/website/landing/templates/index/index.html" />
         <option value="$PROJECT_DIR$/website/landing/templates/portfolio/side_projects.html" />
         <option value="$PROJECT_DIR$/website/landing/views.py" />
+        <option value="$PROJECT_DIR$/website/landing/templates/index/index.html" />
+        <option value="$PROJECT_DIR$/website/landing/templates/base.html" />
         <option value="$PROJECT_DIR$/website/landing/templates/components/navbar.html" />
+        <option value="$PROJECT_DIR$/website/landing/templates/index/_what_ami_looking.html" />
+        <option value="$PROJECT_DIR$/website/landing/templates/components/presentation_card.html" />
+        <option value="$PROJECT_DIR$/website/landing/static/landing/main.css" />
       </list>
     </option>
   </component>
@@ -193,6 +199,21 @@
               <item name="Website" type="462c0819:PsiDirectoryNode" />
               <item name="website" type="462c0819:PsiDirectoryNode" />
               <item name="landing" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Website" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Website" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="landing" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="landing" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Website" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Website" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="landing" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -201,7 +222,15 @@
               <item name="website" type="462c0819:PsiDirectoryNode" />
               <item name="landing" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Website" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Website" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="landing" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="index" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Website" type="b2602c69:ProjectViewProjectNode" />
@@ -226,12 +255,15 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/website/website/settings.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/website/landing/static/landing" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.HTML" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/website/landing/static/landing" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/website/landing/templates/index" />
       <recent name="$PROJECT_DIR$/website/landing" />
@@ -287,7 +319,7 @@
       <option name="presentableId" value="Default" />
       <updated>1558218133556</updated>
       <workItem from="1558218136324" duration="4208000" />
-      <workItem from="1558222480726" duration="3311000" />
+      <workItem from="1558222480726" duration="10268000" />
     </task>
     <task id="LOCAL-00001" summary=":rocket: Basic layout structure">
       <created>1558221482283</created>
@@ -303,19 +335,27 @@
       <option name="project" value="LOCAL" />
       <updated>1558223489462</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary=":rocket: Basic structure and navigation flow">
+      <created>1558226551728</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1558226551728</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7519000" />
+    <option name="totallyTimeSpent" value="14476000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="30" width="1920" height="1050" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.16008538" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16008538" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="CSS Styles" weight="0.32969433" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286026" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3286026" />
@@ -343,7 +383,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value=":rocket: Basic layout structure" />
     <MESSAGE value=":rocket: Brief of landing" />
-    <option name="LAST_COMMIT_MESSAGE" value=":rocket: Brief of landing" />
+    <MESSAGE value=":rocket: Basic structure and navigation flow" />
+    <option name="LAST_COMMIT_MESSAGE" value=":rocket: Basic structure and navigation flow" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/website/website/views.py" />
@@ -371,27 +412,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/website/landing/templates/index/_what_ami_looking.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="18" column="52" lean-forward="true" selection-start-line="18" selection-start-column="52" selection-end-line="18" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/website/landing/static/landing/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/website/landing/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="27" column="21" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/website/landing/templates/portfolio/continuous_learning.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -416,17 +436,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/website/landing/templates/index/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/website/landing/templates/portfolio/side_projects.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="17" column="23" lean-forward="true" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/landing/templates/components/navbar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="11" column="11" lean-forward="true" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/landing/templates/index/_what_ami_looking.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="20" selection-start-column="20" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -437,10 +464,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/website/landing/templates/components/navbar.html">
+    <entry file="file://$PROJECT_DIR$/website/landing/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="531">
-          <caret line="50" column="37" selection-start-line="50" selection-start-column="37" selection-end-line="50" selection-end-column="37" />
+        <state relative-caret-position="131">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/landing/templates/index/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="14" selection-start-column="14" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/landing/static/landing/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="777">
+          <caret line="59" column="25" selection-start-line="59" selection-start-column="25" selection-end-line="59" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/landing/templates/components/presentation_card.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="25" column="45" lean-forward="true" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
+          <folding>
+            <element signature="e#703#709#0#HTML" expanded="true" />
+            <element signature="e#528#534#0#HTML" expanded="true" />
+            <element signature="e#534#540#0#HTML" expanded="true" />
+            <element signature="e#540#546#0#HTML" expanded="true" />
+            <element signature="e#741#747#1#HTML" expanded="true" />
+            <element signature="e#747#753#0#HTML" expanded="true" />
+            <element signature="e#753#759#0#HTML" expanded="true" />
+            <element signature="e#769#775#0#HTML" expanded="true" />
+            <element signature="e#775#781#0#HTML" expanded="true" />
+            <element signature="e#1079#1085#0#HTML" expanded="true" />
+            <element signature="e#1085#1091#0#HTML" expanded="true" />
+            <element signature="e#1244#1250#0#HTML" expanded="true" />
+            <element signature="e#1250#1256#0#HTML" expanded="true" />
+            <element signature="e#1401#1407#0#HTML" expanded="true" />
+            <element signature="e#1407#1413#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

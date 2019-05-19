@@ -1,14 +1,62 @@
 /*noinspection CssUnknownTarget*/
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700,900|Roboto+Slab:400,700&display=swap');
 
 /**********************************************/
 /** Global styles */
 
 html, body {
-    background: #EFEFEF;
-    font-family: 'Open Sans', "San Francisco Display", "Calibri", sans-serif;
+    /*background: #F5F5F5;*/
+    font-family: 'Roboto Slab', "San Francisco Display", "Calibri", sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Raleway', sans-serif;
+}
+
+
+/**********************************************/
+/** Presentation card */
+
+.presentation-card {
+    /*border: 1px solid black;*/
+    margin: 32px 24px;
+    padding: 32px;
+}
+
+.presentation-card .profile-image {
+    background-image: url("./profile.jpg");
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 50%;
+    border: 1px solid #545454;
+    height: 140px;
+    margin: auto;
+    width: 140px;
+}
+
+.presentation-card a {
+    color: #000;
+}
+.presentation-card a > span {
+    color: #000;
+    font-size: 1.1em;
+}
+
+@media screen and (max-width: 991px) {
+    .presentation-card {
+        /*border: 1px solid black;*/
+        margin: 32px 8px;
+        padding: 8px;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
 }
