@@ -26,6 +26,32 @@ h1, h2, h3, h4, h5, h6 {
     padding-right: 16px !important;
 }
 
+/* Navbar for non index pages */
+.navbar-non-index .nav-link {
+}
+
+/* Presentation on navbar */
+.navbar-nav .profile-image {
+    background-image: url("./profile.jpg");
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    border: 1px solid #989898;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    display: inline-block;
+    height: 48px;
+    width: 48px;
+}
+
+.navbar-nav .profile-name {
+    display: inline-block;
+    left: 16px;
+    bottom: 14px;
+    position: relative;
+}
+
 
 /**********************************************/
 /** Presentation card */
@@ -92,6 +118,24 @@ h1, h2, h3, h4, h5, h6 {
         /*border: 1px solid black;*/
         margin: 32px 8px;
         padding: 8px;
+    }
+
+    /* Navbar for non index pages */
+    .navbar-non-index .nav-link {
+        font-size: 1.05rem;
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+    }
+
+    .navbar-nav .profile-name {
+        left: 8px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .navbar-nav .profile-image {
+        height: 40px;
+        width: 40px;
     }
 }
 
