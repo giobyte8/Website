@@ -9,33 +9,56 @@
 {% include "components/navbar.html" %}
 <div class="container pt-5 mt-5">
   <div class="row">
-    <div class="col-12">
-        <blockquote class="blockquote">
-          You can not to know everything, every time. To make software requires
-          a lot of hard work and discipline.
-        </blockquote>
-      </div>
-
     <div class="col-12 text-justify">
       <h1>Side projects</h1>
-      <p>
-        During my career I had the opportunity to work with multiple technology
-        stacks, I’ve been creating enterprise systems, apps and internal tools mainly with
-        Javascript, Java, Laravel, Docker, Python, Swift and another langs/technologies.
+      <p class="mt-4">
+        <i>
+          You can not to know everything, all the time. <br/>
+          To make software requires a lot of hard work and discipline.
+        </i>
+      </p>
+
+      <p class="mt-4">
+        During my career I've been working with multiple technology
+        stacks, I had created enterprise systems, apps and internal tools mainly with
+        Javascript, Java, Laravel, Docker, Python, Swift and another languages/technologies.
       </p>
 
       <p>
-        Apart of the projects created for client/enterprises where i had worked you can
-        check my public side projects on my
-        <a href="https://github.com/DiganmeGiovanni">Github account</a>.
+        In my own time I enjoy to play/learn doing side projects to satisfy my curiosity
+        or fix a few of my own needs, after all, that's the purpose of technology.<br/>
       </p>
 
       <p>
-        Also you can check the repositories with basic introductions and exercises that
-        i created for a few of the technologies when
-        <a href="{% url 'learning' %}">i started to learn it</a>.
+        You can checkout my
+        <a href="https://github.com/DiganmeGiovanni">
+          <span class="fab fa-github"></span>
+          <span>Github account</span>
+        </a> for more work than presented here.
       </p>
     </div>
+  </div>
+
+  <!-- Projects grid -->
+  <div class="row mt-3">
+    {% for project in projects %}
+      <div class="col-6 pt-3">
+        <div class="card">
+          <div class="card-body">
+            <div class="card-title">{{ project.title }}</div>
+            <div class="card-subtitle text-muted mb-2">{{ project.stack }}</div>
+            <p class="card-text">
+              {{ project.desc }}
+            </p>
+
+            <a href="{{ project.link }}" class="card-link" target="_blank">
+              <span class="fab fa-github"></span>
+              <span>&nbsp;View on Github</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
   </div>
 </div>
 {% endblock %}
