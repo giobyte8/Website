@@ -24,7 +24,7 @@ def portfolio(req):
     py_docker = Project()
     py_docker.title = 'PyDocker'
     py_docker.stack = 'Python / Django / Docker API'
-    py_docker.desc = 'Manage docker containers from a human friendly WebUI'
+    py_docker.desc = 'Monitor, start and stop docker containers from a human friendly WebUI'
     py_docker.link = 'https://github.com/DiganmeGiovanni/PyDocker'
 
     rtsp_viewer = Project()
@@ -58,7 +58,7 @@ def portfolio(req):
     pos.stack = 'Electron / React / Sequelize ORM'
     pos.desc = """
         The small businesses in latam do not need an over engineered Point of Sales,
-        they need a portable, local and simple to use UI to manages its small
+        they need a portable, local and simple to use UI to manage its small
         inventory and daily sales. 
     """
     pos.link = "https://github.com/DiganmeGiovanni/PoS2"
@@ -88,10 +88,9 @@ def portfolio(req):
     secret_strings.title = "JSecret strings"
     secret_strings.stack = "Java / Java Cryptography Architecture"
     secret_strings.desc = """
-        A single tool to encryption and decryption of Strings through native Java
+        A tool for encryption and decryption of Strings through native Java
         JCA (Java Cryptography Architecture) classes and optionally using custom
-        security layers (Basic funny tricks) on top of Standard Cryptography
-        Architecture.
+        security layers.
     """
     secret_strings.link = "https://github.com/DiganmeGiovanni/JSecretStrings"
 
@@ -110,8 +109,8 @@ def portfolio(req):
         py_docker,
         rtsp_viewer,
         sigma,
-        chat_ss,
         fx_form,
+        chat_ss,
         iot_noob,
         codelizer,
         secret_strings,
