@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 # Create your views here.
-from .models import Project
+from .models import Project, Post
 
 
 def index(req):
@@ -220,6 +220,53 @@ def learning(req):
 
 
 def blog(req):
+    rest_dropwizard = Post()
+    rest_dropwizard.title = "Book review: RESTful web services with dropwizard"
+    rest_dropwizard.desc = """
+        Dropwizard is a Java Framework for create REST Web Services using
+        technologies such as: Jersey, Jackson, JDBI, Jetty and Hibernate.
+    """
+    rest_dropwizard.link = "https://lineaporlinea.wordpress.com/2014/06/08/review-restful-web-services-with-dropwizard/"
+
+    react = Post()
+    react.title = "ReactJS: Preparando el ambiente de desarrollo"
+    react.desc = """
+            Podemos configurar un ambiente de desarrollo para trabajar con React
+            sin necesidad de herramientas de automatización ni engorrosos scripts.
+            Basta con utilizar comandos npm para automatizar la transformación y
+            empaquetado de nuestro código.
+        """
+    react.link = "https://lineaporlinea.wordpress.com/2016/04/06/reactjs-preparando-el-flujo-de-desarrollo/"
+
+    chat = Post()
+    chat.title = """
+        Creando un sistema de chat con NodeJS, Socket IO, Mongo DB,
+        Foundation y openshift
+    """
+    chat.desc = """
+        En esta serie de artículos vamos a crear (paso a paso) un sistema de
+        chat basado en NodeJS y WebSockets, con su respectivo cliente web y
+        capaz de almacenar el historial de conversaciones en MongoDB
+    """
+    chat.link = "https://lineaporlinea.wordpress.com/2014/10/25/parte-1-creando-un-sistema-de-chat-sobre-nodejs-con-socket-io-mondodb-foundation-y-openshift/#more-192"
+
+    github_intro = Post()
+    github_intro.title = "Comenzando con git y github"
+    github_intro.desc = """
+        Si eres desarrollador, o estas en el área  seguramente has oído
+        últimamente mencionar a “github” o incluso tal vez ya lo estés
+        utilizando o lo conozcas y tengas intenciones de comenzar a utilizarlo. 
+    """
+    github_intro.link = "https://lineaporlinea.wordpress.com/2013/05/13/comenzando-con-git-y-github/#more-83"
+
+    posts = [
+        rest_dropwizard,
+        react,
+        chat,
+        github_intro
+    ]
+
     return render(req, 'blog/index.html', {
-        'nav_active': 'blog'
+        'nav_active': 'blog',
+        'posts': posts
     })

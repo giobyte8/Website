@@ -9,3 +9,10 @@ class Project(object):
         self.stack = None
         self.desc = None
         self.link = None
+
+
+class Post(object):
+    def __init__(self):
+        self.title = None
+        self.desc = None
+        self.link = None
