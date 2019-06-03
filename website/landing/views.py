@@ -126,8 +126,96 @@ def portfolio(req):
 
 
 def learning(req):
+    py_side = Project()
+    py_side.title = "LearningPySide2"
+    py_side.stack = "Qt / PySide 2 / QML"
+    py_side.link = "https://github.com/DiganmeGiovanni/LearningPySide2"
+
+    python = Project()
+    python.title = "LearningPython"
+    python.stack = "Python 3"
+    python.link = "https://github.com/DiganmeGiovanni/LearningPython"
+
+    node = Project()
+    node.title = "LearningNodeJS"
+    node.stack = "Node JS / Socket IO"
+    node.link = "https://github.com/DiganmeGiovanni/LearningNodeJS"
+
+    bash = Project()
+    bash.title = "LearningBash"
+    bash.stack = "Bash scripting"
+    bash.link = "https://github.com/DiganmeGiovanni/LearningBash"
+
+    j_monkey = Project()
+    j_monkey.title = "LearningJMonkey"
+    j_monkey.stack = "JMonkey Engine / 3D Programming / Java"
+    j_monkey.link = "https://github.com/DiganmeGiovanni/LearningJMonkey"
+
+    cpp = Project()
+    cpp.title = "LearningCpp"
+    cpp.stack = "C++"
+    cpp.link = "https://github.com/DiganmeGiovanni/LearningCpp"
+
+    django = Project()
+    django.title = "LearningDjango"
+    django.stack = "Django / Python"
+    django.link = "https://github.com/DiganmeGiovanni/LearningDjango"
+
+    android = Project()
+    android.title = "LearningAndroid"
+    android.stack = "Android / Java"
+    android.link = "https://github.com/DiganmeGiovanni/LearningAndroid"
+
+    flux = Project()
+    flux.title = "LearningFlux"
+    flux.stack = "React / Flux / Prop Types"
+    flux.link = "https://github.com/DiganmeGiovanni/LearningFlux"
+
+    networking = Project()
+    networking.title = "LearningNetworking"
+    networking.stack = "Cisco networking / Basic networking theory"
+    networking.link = "https://github.com/DiganmeGiovanni/LearningNetworking"
+
+    databases = Project()
+    databases.title = "LearningDatabases"
+    databases.stack = "Oracle Management / MongoDB management / MySQL management"
+    databases.link = "https://github.com/DiganmeGiovanni/LearningDatabases"
+
+    java_fx = Project()
+    java_fx.title = "LearningJavaFX"
+    java_fx.stack = "Java FX / Java 8"
+    java_fx.link = "https://github.com/DiganmeGiovanni/LearningJavaFX"
+
+    foundation = Project()
+    foundation.title = "LearningFoundation"
+    foundation.stack = "Foundation framework / CSS3"
+    foundation.link = "https://github.com/DiganmeGiovanni/LearningFoundation"
+
+    oop = Project()
+    oop.title = "LearningOOP"
+    oop.stack = "Object Oriented Programming / Java"
+    oop.link = "https://github.com/DiganmeGiovanni/LearningOOP"
+
+    projects = [
+        py_side,
+        python,
+        node,
+        bash,
+        j_monkey,
+        cpp,
+        django,
+        android,
+        flux,
+        networking,
+        databases,
+        java_fx,
+        foundation,
+        oop
+    ]
+
     return render(req, 'portfolio/continuous_learning.html', {
-        'nav_active': 'learning'
+        'nav_active': 'learning',
+        'projects': projects
     })
 
 

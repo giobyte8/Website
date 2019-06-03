@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="4f7c926f-d63e-439d-818e-24a76fe7ac3d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/landing/templates/portfolio/continuous_learning.html" beforeDir="false" afterPath="$PROJECT_DIR$/website/landing/templates/portfolio/continuous_learning.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/landing/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/website/landing/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,7 +30,58 @@
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/website/landing/views.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="520">
+                  <caret line="214" selection-start-line="214" selection-end-line="214" />
+                  <folding>
+                    <element signature="e#0#35#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/website/landing/templates/portfolio/continuous_learning.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="500">
+                  <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/website/landing/templates/portfolio/side_projects.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="734">
+                  <caret line="41" column="2" lean-forward="true" selection-start-line="41" selection-start-column="2" selection-end-line="61" selection-end-column="8" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/website/landing/views.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="520">
+                  <caret line="125" lean-forward="true" selection-start-line="125" selection-end-line="125" />
+                  <folding>
+                    <element signature="e#0#35#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -65,14 +118,14 @@
         <option value="$PROJECT_DIR$/website/landing/templates/components/navbar_index.html" />
         <option value="$PROJECT_DIR$/website/landing/templates/base.html" />
         <option value="$PROJECT_DIR$/website/landing/templates/index/index.html" />
-        <option value="$PROJECT_DIR$/website/landing/templates/portfolio/continuous_learning.html" />
         <option value="$PROJECT_DIR$/website/landing/templates/blog/index.html" />
         <option value="$PROJECT_DIR$/website/landing/models.py" />
-        <option value="$PROJECT_DIR$/website/landing/templates/portfolio/side_projects.html" />
         <option value="$PROJECT_DIR$/website/landing/templates/components/navbar.html" />
         <option value="$PROJECT_DIR$/website/landing/templates/index/_what_ami_looking.html" />
         <option value="$PROJECT_DIR$/website/landing/static/landing/main.css" />
+        <option value="$PROJECT_DIR$/website/landing/templates/portfolio/side_projects.html" />
         <option value="$PROJECT_DIR$/website/landing/views.py" />
+        <option value="$PROJECT_DIR$/website/landing/templates/portfolio/continuous_learning.html" />
       </list>
     </option>
   </component>
@@ -104,21 +157,6 @@
               <item name="Website" type="b2602c69:ProjectViewProjectNode" />
               <item name="Website" type="462c0819:PsiDirectoryNode" />
               <item name="website" type="462c0819:PsiDirectoryNode" />
-              <item name="landing" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Website" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Website" type="462c0819:PsiDirectoryNode" />
-              <item name="website" type="462c0819:PsiDirectoryNode" />
-              <item name="landing" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Website" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Website" type="462c0819:PsiDirectoryNode" />
-              <item name="website" type="462c0819:PsiDirectoryNode" />
-              <item name="landing" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="landing" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -244,6 +282,7 @@
       <workItem from="1558303324684" duration="9518000" />
       <workItem from="1558450371478" duration="2515000" />
       <workItem from="1558830677781" duration="114000" />
+      <workItem from="1559601589701" duration="3016000" />
     </task>
     <task id="LOCAL-00001" summary=":rocket: Basic layout structure">
       <created>1558221482283</created>
@@ -336,14 +375,22 @@
       <option name="project" value="LOCAL" />
       <updated>1558451599629</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary=":rocket: Fix the order of side project">
+      <created>1559603342567</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1559603342567</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29227000" />
+    <option name="totallyTimeSpent" value="32243000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="30" width="1920" height="1050" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16145833" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -387,7 +434,8 @@
     <MESSAGE value=":rocket: Add contact button at end of career overview" />
     <MESSAGE value=":rocket: Fix profile image" />
     <MESSAGE value=":rocket: Fix project descriptions" />
-    <option name="LAST_COMMIT_MESSAGE" value=":rocket: Fix project descriptions" />
+    <MESSAGE value=":rocket: Fix the order of side project" />
+    <option name="LAST_COMMIT_MESSAGE" value=":rocket: Fix the order of side project" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/website/website/views.py" />
@@ -455,13 +503,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/website/landing/templates/portfolio/continuous_learning.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/website/landing/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
@@ -479,16 +520,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/website/landing/templates/portfolio/side_projects.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="33" column="53" lean-forward="true" selection-start-line="33" selection-start-column="53" selection-end-line="33" selection-end-column="53" />
-          <folding>
-            <element signature="e#1756#1762#0#HTML" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -527,11 +558,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/website/landing/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="640">
-          <caret line="101" column="54" selection-start-line="101" selection-start-column="54" selection-end-line="101" selection-end-column="54" />
+        <state relative-caret-position="520">
+          <caret line="214" selection-start-line="214" selection-end-line="214" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/landing/templates/portfolio/side_projects.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="734">
+          <caret line="41" column="2" lean-forward="true" selection-start-line="41" selection-start-column="2" selection-end-line="61" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/landing/templates/portfolio/continuous_learning.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
         </state>
       </provider>
     </entry>
