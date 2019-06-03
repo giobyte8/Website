@@ -13,19 +13,35 @@ def index(req):
 def portfolio(req):
     watchlist = Project()
     watchlist.title = 'Watchlist'
-    watchlist.stack = 'Python / Django Rest / React / Redux'
+    watchlist.stack = 'Python / Django Rest Framework / React / Redux'
     watchlist.desc = """
         Track all the movies that you're wishing to watch, you'd watched or you're
         waiting for, incoming releases and suggestions based on your
-        preferences.
+        preferences. Create multiple lists and share it with friends
     """
     watchlist.link = 'https://github.com/DiganmeGiovanni/WatchlistWeb'
+
+    pos = Project()
+    pos.title = 'POS For the people'
+    pos.stack = 'Electron / React / Sequelize ORM'
+    pos.desc = """
+            The small businesses in latam do not need an over engineered Point of Sales,
+            they need a portable, local and simple to use UI to manage its small
+            inventory and daily sales. 
+        """
+    pos.link = "https://github.com/DiganmeGiovanni/PoS2"
 
     py_docker = Project()
     py_docker.title = 'PyDocker'
     py_docker.stack = 'Python / Django / Docker API'
     py_docker.desc = 'Monitor, start and stop docker containers from a human friendly WebUI'
     py_docker.link = 'https://github.com/DiganmeGiovanni/PyDocker'
+
+    chat_ss = Project()
+    chat_ss.title = "Chat Team SS"
+    chat_ss.stack = "Node JS / Socket IO / Express JS"
+    chat_ss.desc = "A real time and responsive web chat system built with web sockets and NoSQL"
+    chat_ss.link = "https://github.com/DiganmeGiovanni/Chat-TeamSS"
 
     rtsp_viewer = Project()
     rtsp_viewer.title = 'RTSPViewer'
@@ -53,34 +69,12 @@ def portfolio(req):
     """
     fx_form.link = 'https://github.com/DiganmeGiovanni/FXFormGenerator'
 
-    pos = Project()
-    pos.title = 'POS For the people'
-    pos.stack = 'Electron / React / Sequelize ORM'
-    pos.desc = """
-        The small businesses in latam do not need an over engineered Point of Sales,
-        they need a portable, local and simple to use UI to manage its small
-        inventory and daily sales. 
-    """
-    pos.link = "https://github.com/DiganmeGiovanni/PoS2"
-
-    chat_ss = Project()
-    chat_ss.title = "Chat Team SS"
-    chat_ss.stack = "Node JS / Socket IO / Express JS"
-    chat_ss.desc = "A real time web chat system"
-    chat_ss.link = "https://github.com/DiganmeGiovanni/Chat-TeamSS"
-
-    iot_noob = Project()
-    iot_noob.title = "IoT Noob"
-    iot_noob.stack = "Node JS / Arduino / Android"
-    iot_noob.desc = "Control your home's lights remotely from an android app"
-    iot_noob.link = "https://github.com/DiganmeGiovanni/IoTNoobAndroidClient"
-
     codelizer = Project()
     codelizer.title = "Codelizer Service"
-    codelizer.stack = "Java"
+    codelizer.stack = "Java / Spring"
     codelizer.desc = """
         Subtract Java classes and methods from Java projects and put them into
-        a database for analytics about documentation, methods and params
+        a database for analytics
     """
     codelizer.link = "https://github.com/DiganmeGiovanni/CodelizerService"
 
@@ -89,8 +83,7 @@ def portfolio(req):
     secret_strings.stack = "Java / Java Cryptography Architecture"
     secret_strings.desc = """
         A tool for encryption and decryption of Strings through native Java
-        JCA (Java Cryptography Architecture) classes and optionally using custom
-        security layers.
+        JCA (Java Cryptography Architecture) classes.
     """
     secret_strings.link = "https://github.com/DiganmeGiovanni/JSecretStrings"
 
@@ -98,23 +91,32 @@ def portfolio(req):
     qr_scanner.title = "QR Scanner"
     qr_scanner.stack = "Java / ZXing"
     qr_scanner.desc = """
-        Scan QR codes through your web cam and launch your browser if they are
-        links or file browser if local filesystem urls
+        Scan QR codes through your web cam and launch your browser if it are
+        links or file browser if it are local filesystem urls
     """
     qr_scanner.link = "https://github.com/DiganmeGiovanni/QRScanner"
+
+    docker_scripts = Project()
+    docker_scripts.title = "Docker Scripts"
+    docker_scripts.stack = "Docker / Docker Compose / Bash"
+    docker_scripts.desc = """
+        Helper and utility scripts and docker files to create containers
+        for my daily development workflow
+    """
+    docker_scripts.link = "https://github.com/DiganmeGiovanni/DockerScripts"
 
     projects = [
         watchlist,
         pos,
         py_docker,
+        chat_ss,
         rtsp_viewer,
         sigma,
         fx_form,
-        chat_ss,
-        iot_noob,
         codelizer,
         secret_strings,
-        qr_scanner
+        qr_scanner,
+        docker_scripts
     ]
 
     return render(req, 'portfolio/side_projects.html', {
