@@ -5,7 +5,7 @@ services:
     build:
       context: ../
       dockerfile: ./docker.production/web.docker
-    image: website-prod-web:1.0
+    image: gcr.io/gioawesomesite/website-prod-web:1.0
     container_name: website-prod-web
     ports:
       - "81:80"
@@ -17,7 +17,7 @@ services:
     build:
       context: ../
       dockerfile: ./docker.production/app.docker
-    image: website-prod-app:1.0
+    image: gcr.io/gioawesomesite/website-prod-app:1.2
     container_name: website-prod-app
-    command: bash -c "cd website && gunicorn --bind=0.0.0.0:8000 website.wsgi:application"
+    command: /bin/sh -c "cd website && gunicorn --bind=0.0.0.0:8000 website.wsgi:application"
     restart: always
