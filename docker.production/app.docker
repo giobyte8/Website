@@ -8,7 +8,7 @@ RUN mkdir /app
 WORKDIR /app
 
 # Install app dependencies during image build phase
-COPY ./requirements.txt /app
+ADD . /app/
 RUN pip install --no-cache-dir -r requirements.txt && \
     pip install --no-cache-dir gunicorn
 ENV PYTHONUNBUFFERED 1

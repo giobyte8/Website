@@ -2,25 +2,22 @@ version: '3'
 
 services:
   web:
-    image: nginx:1.15.9-alpine
-    container_name: website-web
-    volumes:
-      - ./vhost.conf:/etc/nginx/conf.d/default.conf
-      - ../:/var/www
+    build:
+      context: ../
+      dockerfile: ./docker.production/web.docker
+    image: website-prod-web:1.0
+    container_name: website-prod-web
     ports:
       - "81:80"
     links:
       - app
-    working_dir: /var/www
     restart: always
   
   app:
     build:
       context: ../
       dockerfile: ./docker.production/app.docker
-    image: website:app
+    image: website-prod-app:1.0
+    container_name: website-prod-app
     command: bash -c "cd website && gunicorn --bind=0.0.0.0:8000 website.wsgi:application"
-    container_name: website-app
     restart: always
-    volumes:
-    - ..:/app
