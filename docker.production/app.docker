@@ -2,7 +2,7 @@
 # Image used to run python applications with
 # requirements.txt on its root
 
-FROM python:3.6.7-stretch
+FROM python:3.6.7-alpine
 
 RUN mkdir /app
 WORKDIR /app
