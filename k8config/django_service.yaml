@@ -1,0 +1,16 @@
+#
+# Service to expose django deployment to
+# another pods
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: django-service
+  labels:
+    name: django-service
+spec:
+  ports:
+  - port: 80
+    targetPort: 8000
+  selector: # Which pods will be covered by service?
+    app: django
