@@ -13,6 +13,10 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Raleway', sans-serif;
 }
 
+.bottom-border-light {
+    border-bottom: 1px solid #ECECEC;
+}
+
 /**********************************************/
 /** Navbar */
 
@@ -26,30 +30,44 @@ h1, h2, h3, h4, h5, h6 {
     padding-right: 16px !important;
 }
 
-/* Navbar for non index pages */
-.navbar-non-index .nav-link {
+.navbar-toggler {
+    border: none;
+    outline: none;
 }
 
-/* Presentation on navbar */
-.navbar-nav .profile-image {
+.navbar-toggler:focus {
+    outline: none;
+}
+
+.navbar-nav .nav-link-brand {
+    padding-left: 0 !important;
+}
+
+.navbar-nav .navbar-profile-link {
+    display: flex;
+}
+
+/** @deprecated (Cause images from navbar was removed) */
+.navbar-nav .navbar-profile-link .image {
     background-image: url("./profile.jpg");
     -webkit-background-size: cover;
     background-size: cover;
     background-position: center center;
-    border: 1px solid #989898;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    display: inline-block;
     height: 48px;
+    margin-right: 12px;
     width: 48px;
 }
 
-.navbar-nav .profile-name {
-    display: inline-block;
-    left: 16px;
-    bottom: 14px;
-    position: relative;
+.navbar-nav .navbar-profile-link .fullname {
+    color: #323232;
+    font-size: .95rem;
+}
+
+.navbar-nav .navbar-profile-link .job {
+    font-size: 0.9rem;
 }
 
 
@@ -113,6 +131,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
+/**********************************************/
+/** Media queries */
+
 @media screen and (max-width: 991px) {
     .presentation-card {
         /*border: 1px solid black;*/
@@ -120,22 +141,26 @@ h1, h2, h3, h4, h5, h6 {
         padding: 8px;
     }
 
-    /* Navbar for non index pages */
-    .navbar-non-index .nav-link {
-        font-size: 1.05rem;
+    .navbar-nav .nav-item .nav-link {
+        font-size: 1rem;
         padding-left: 8px !important;
         padding-right: 8px !important;
     }
 
-    .navbar-nav .profile-name {
-        left: 8px;
+    .navbar-nav .nav-item .nav-link-brand {
+        padding-left: 0 !important;
     }
 }
 
 @media screen and (max-width: 767px) {
-    .navbar-nav .profile-image {
-        height: 40px;
-        width: 40px;
+    .navbar .navbar-collapse {
+        margin-top: 8px;
+        padding-bottom: 16px;
+        text-align: center;
+    }
+
+    .navbar .navbar-collapse.show {
+        border-bottom: 2px solid #959595;
     }
 }
 
