@@ -92,17 +92,8 @@ h1, h2, h3, h4, h5, h6 {
     width: 140px;
 }
 
-.presentation-card a {
-    color: #000;
-}
-
 .presentation-card a:hover {
     text-decoration: none;
-}
-
-.presentation-card a > span {
-    color: #000;
-    font-size: 1.1em;
 }
 
 

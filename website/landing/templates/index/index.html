@@ -3,6 +3,27 @@
 
 {% block head %}
   <title>Giovanni Aguirre</title>
+
+  {% if not debug %}
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', '{{ analytics_ua }}', 'auto');
+      ga('send', 'pageview', 'index');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ analytics_ua }}"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', '{{ analytics_ua }}');
+    </script>
+  {% endif %}
 {% endblock %}
 
 {% block scripts %}
@@ -11,6 +32,7 @@
 
 {% block content %}
   {% include "components/navbar_index.html" %}
+  {% include "components/modal_contact.html" %}
   <div class="container pt-5">
 
     <div class="row">

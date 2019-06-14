@@ -1,12 +1,18 @@
 from django.shortcuts import render
-
-# Create your views here.
 from .models import Project, Post
+import environ
+
+env = environ.Env(
+    DEBUG=(bool, False)
+)
+environ.Env.read_env()
 
 
 def index(req):
     return render(req, 'index/index.html', {
-        'nav_active': 'index'
+        'nav_active': 'index',
+        'debug': env('DEBUG'),
+        'analytics_ua': env('ANALYTICS_UA')
     })
 
 
@@ -121,7 +127,9 @@ def portfolio(req):
 
     return render(req, 'portfolio/side_projects.html', {
         'nav_active': 'portfolio',
-        'projects': projects
+        'projects': projects,
+        'debug': env('DEBUG'),
+        'analytics_ua': env('ANALYTICS_UA')
     })
 
 
@@ -215,7 +223,9 @@ def learning(req):
 
     return render(req, 'portfolio/continuous_learning.html', {
         'nav_active': 'learning',
-        'projects': projects
+        'projects': projects,
+        'debug': env('DEBUG'),
+        'analytics_ua': env('ANALYTICS_UA')
     })
 
 
@@ -268,5 +278,7 @@ def blog(req):
 
     return render(req, 'blog/index.html', {
         'nav_active': 'blog',
-        'posts': posts
+        'posts': posts,
+        'debug': env('DEBUG'),
+        'analytics_ua': env('ANALYTICS_UA')
     })
