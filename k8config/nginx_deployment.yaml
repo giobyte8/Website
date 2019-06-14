@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: web
-        image: gcr.io/gioawesomesite/website-prod-web:1.3
+        image: gcr.io/gioawesomesite/website-prod-web:1.4
         imagePullPolicy: Always
         ports:
         - containerPort: 80
