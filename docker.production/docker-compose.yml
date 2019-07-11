@@ -17,7 +17,7 @@ services:
     build:
       context: ../
       dockerfile: ./docker.production/app.docker
-    image: gcr.io/gioawesomesite/website-prod-app:1.6
+    image: gcr.io/gioawesomesite/website-prod-app:1.7
     container_name: website-prod-app
     command: /bin/sh -c "cd website && gunicorn --bind=0.0.0.0:80 website.wsgi:application"
     restart: always
