@@ -1,12 +1,11 @@
 # Personal website
 This project contains my [personal web site](https://giovanniaguirre.me)
 
-1. Required setup steps
-2. Run/Deployment
-    * Run on docker (Development)
-    * Run on docker (Production)
-    * Run on kubernetes
-    * Deploy to Google App Engine
+1. [Required setup steps](#Required-setup-steps)
+2. [Run/Deployment](#Run/Deployment)
+    * [Run on docker (Development)](#Run-on-docker-(Development))
+    * [Run on docker (Production)](#Run-on-docker-(Production))
+    * [Run on kubernetes](#Deploy-on-kubernetes)
 
 ## Required setup steps
 1. Clone this repo
@@ -31,7 +30,7 @@ python -c 'import random; print("".join([random.choice("abcdefghijklmnopqrstuvwx
 ## Run/Deployment
 The project is configured to allow deployment on local environment through docker (For development), docker production, kubernetes and google app engine
 
-### Run on docker (Development):
+### Run on docker (Development)
 
 From project root:
 ```bash
@@ -59,7 +58,7 @@ This will create two containers, one with gunicorn and another with nginx, all s
 
 The application files and statics are copied into the images during build phase, so images need to be rebuilt and redeployed to reflect latest changes
 
-## Deploy on kubernetes
+### Deploy on kubernetes
 The kubernetes config files are located at `k8config` folder
 
 To deploy a new version of website the required steps are:
