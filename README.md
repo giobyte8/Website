@@ -70,3 +70,11 @@ To deploy a new version of website the required steps are:
     1. Update the `django-deployment.yml` file
     2. Update the `nginx-deployment.yml` file (If applies)
 4. Apply changes on your cluster through `kubectl apply -f <updated-file.yaml>`
+
+### Deploy to GAE
+To deploy on google app engine standard environment, the setup is specified in the `app.yaml`. This file contains the entry point and the statics setup to deploy the application in GAE
+
+Also, the `.gcloudignore` file contains a list of files that we won't to be uploaded to google cloud.
+
+Ensure to setup the google cloud sdk and setup the project.
+Setup the entrypoint field in the app.yaml and run `gcloud app deploy` in the path where the `app.yaml` file is located
