@@ -1,4 +1,7 @@
 # Personal website
+
+> Current development was moved to 'jekyllmigration' branch
+
 This project contains my [personal web site](https://giovanniaguirre.me)
 
 1. [Required setup steps](#Required-setup-steps)
