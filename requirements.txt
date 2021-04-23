@@ -1,5 +1,0 @@
-Django==2.2.10
-django-environ==0.4.5
-pytz==2019.1
-sqlparse==0.3.0
-gunicorn==19.9.0
