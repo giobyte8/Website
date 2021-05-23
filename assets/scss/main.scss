@@ -2,6 +2,23 @@
 
 html, body {
     background: #F4F4F4;
+    color: #444444;
     font-family: 'Roboto Mono', monospace;
     margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, a {
+    color: black;
+}
+
+.project-card {
+    cursor: pointer;
+
+    &::hover {
+        background-color: black;   
+    }
+}
+
+.card-footer {
+    background-color: #FFF;
 }

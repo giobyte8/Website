@@ -1,0 +1,27 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "Giovanni Aguirre personal website and blog",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giobyte8/Website.git"
+  },
+  "author": "Giovanni Aguirre",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/giobyte8/Website/issues"
+  },
+  "homepage": "https://github.com/giobyte8/Website#readme",
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.35",
+    "@fortawesome/free-solid-svg-icons": "^5.15.3",
+    "@fortawesome/react-fontawesome": "^0.1.14",
+    "@octokit/core": "^3.4.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}

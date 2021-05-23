@@ -3,3 +3,12 @@
         {{ .Content }}
     </div>
 {{ end }}
+
+{{ define "scripts" }}
+    {{ $GH_KEY := getenv "HUGO_GITHUB_AUTH_KEY" }}
+    {{ $jsParams := (dict "params" (dict "GH_KEY" $GH_KEY)) }}
+    {{ $js := resources.Get "js/GithubProjects/FeaturedProjects.jsx" }}
+    {{ $js := $js | js.Build $jsParams  }}
+
+    <script src="{{ $js.Permalink }}"></script>
+{{ end }}
