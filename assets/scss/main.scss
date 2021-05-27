@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
+$bg-color: #F4F4F4;
+$color: #444;
+
 html, body {
-    background: #F4F4F4;
-    color: #444444;
+    background: $bg-color;
+    color: $color;
     font-family: 'Roboto Mono', monospace;
     margin: 0;
 }
@@ -10,6 +13,23 @@ html, body {
 h1, h2, h3, h4, h5, h6, a {
     color: black;
 }
+
+
+// Navbar
+
+.navbar {
+    background-color: $bg-color;
+    border-bottom: 1px solid #E4E4E4;
+
+    div .navbar-nav .nav-item .nav-link {
+        padding-left: 1.5rem;
+        padding-right: 0;
+        text-decoration: underline;
+    }
+}
+
+
+// Project cards
 
 .project-card {
     cursor: pointer;
@@ -19,6 +39,6 @@ h1, h2, h3, h4, h5, h6, a {
     }
 }
 
-.card-footer {
-    background-color: #FFF;
+.project-card .card-footer {
+    background-color: white;
 }

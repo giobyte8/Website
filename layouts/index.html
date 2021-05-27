@@ -1,5 +1,6 @@
 {{ define "main" }}
-    <div class="container pt-3">
+    <div class="container">
+        {{ partial "navbar.html" . }}
         {{ .Content }}
     </div>
 {{ end }}
