@@ -1,26 +1,37 @@
 
 <nav class="navbar navbar-expand-md navbar-light sticky-top">
-        <a class="navbar-brand d-none" href="#">Navbar</a>
-
         <div id="navbar-links-container"
             class="collapse navbar-collapse"
         >
+            {{ if not .IsHome }}
+                {{ $homeMenuItem := index .Site.Menus.main 0 }}
+                
+                <ul class="navbar-nav pt-1">
+                    <li class="nav-item">
+                        <a class="nav-link"
+                            href="{{ $homeMenuItem.URL }}">
+                            {{ $homeMenuItem.Title }}
+                        </a>
+                    </li>
+                </ul>
+            {{ end }}
+
             <ul class="navbar-nav ms-auto pt-1 pe-3 pe-md-0 mb-3 mb-md-0">
-                <li class="nav-item">
-                    <a class="nav-link text-end text-md-start" href="#">
-                        Projects
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-end text-md-start" href="#">
-                        Blog
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-end text-md-start" href="#">
-                        Contact
-                    </a>
-                </li>
+                {{ $currPage := . }}
+                {{ range after 1 .Site.Menus.main }}
+                    <li class="nav-item">
+                        <a 
+                            href="{{ .URL }}"
+                            class="
+                                nav-link
+                                text-end
+                                text-md-start
+                                {{ if $currPage.IsMenuCurrent "main" . }}active{{ end }}"
+                        >
+                            {{ .Title }}
+                        </a>
+                    </li>
+                {{ end }}
             </ul>
         </div>
 
