@@ -16,3 +16,16 @@ menu:
     title: Contact
     url: /contact/
     weight: 2
+
+markup:
+  highlight:
+    codeFences: true
+    lineNos: false
+    lineNumbersInTable: true
+    noClasses: false
+
+    # Styles declared in assets/scss/syntax.css
+    style: native
+
+pygmentsUseClasses: true
+pygmentsCodefences: true

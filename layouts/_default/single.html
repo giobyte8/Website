@@ -1,3 +1,10 @@
+{{ define "styles" }}
+    {{ $syntaxCss := resources.Get "scss/syntax.scss" | resources.ToCSS }}
+    {{ $syntaxCss := $syntaxCss | resources.Minify | resources.Fingerprint }}
+
+    <link rel="stylesheet" href="{{ $syntaxCss.Permalink }}">
+{{ end }}
+
 {{ define "main" }}
     <div class="container">
         {{ partial "navbar.html" . }}
