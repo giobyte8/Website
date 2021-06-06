@@ -2,19 +2,31 @@
 
 $bg-color: #F4F4F4;
 $color: #444;
+$footer-bg-color: #E4E4E4;
 
 $dark-bg-color: #333;
 $dark-color: #E4E4E4;
+$dark-footer-bg-color: #1A1A1A;
 
 html, body {
     background: $bg-color;
     color: $color;
     font-family: 'Roboto Mono', monospace;
+    height: 100%;
     margin: 0;
+    min-height: 100%;
 }
 
 h1, h2, h3, h4, h5, h6, a {
     color: black;
+}
+
+footer {
+    background-color: $footer-bg-color;
+}
+
+.wrapper {
+    min-height: calc(100% - 80px);
 }
 
 
@@ -51,6 +63,10 @@ h1, h2, h3, h4, h5, h6, a {
 
     h1, h2, h3, h4, h5, h6, a {
         color: white;
+    }
+
+    footer {
+        background-color: $dark-footer-bg-color;
     }
 
     a:hover,
@@ -98,5 +114,17 @@ h1, h2, h3, h4, h5, h6, a {
     .card-footer {
         background-color: black;
         border-top: 1px solid rgba(255, 255, 255, 0.225);
+    }
+}
+
+@media screen and(max-width: 767px) {
+    .wrapper {
+        min-height: calc(100% - 104px - 16px);
+    }
+}
+
+@media screen and(max-width: 408px) {
+    .wrapper {
+        min-height: calc(100% - 128px - 16px);
     }
 }
