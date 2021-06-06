@@ -17,26 +17,26 @@ systemctl stop <service_name>
 systemctl status <service_name>
 ```
 
-If service refuses to stop gracefully, you can force it with `kill` subcommand
+Commands are pretty self-descriptive. Now, if a service refuses to stop gracefully, you can force it with `kill` subcommand
 
 ```bash
 systemctl kill <service_name>
 ```
 
 
-
 ## Restart and reload
 
-After updating a configuration file we must either *restart* or *reload* the service, that causes the service to re-read the configuration file and apply changes. Take a look on below examples
+After updating a configuration file we must either `restart` or `reload` the service, that causes the service to re-read the configuration file and apply changes. Take a look on below examples
 
 ```bash
 systemctl restart sshd
 systemctl reload sshd
 ```
 
-Now, what's the difference between *restart* and *reload*?
+Now, what's the difference between `restart` and `reload`?
 
-**restart** will shut down service entirely and then start it again, whereas **reload** will re-read its configuration but keep the same process running.
+`restart` will shut down service entirely and then start it again, whereas `reload` will re-read its configuration but keep the same process running.
+
 
 ## Enable and disable
 
