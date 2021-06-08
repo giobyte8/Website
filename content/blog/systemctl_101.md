@@ -1,7 +1,7 @@
 ---
 title: "Systemctl basic usage"
 date: 2021-06-03T00:05:11-05:00
-draft: true
+draft: false
 summary: |
     Introduction to the usage of `systemctl` to manage services under
     linux systems that uses `systemd`.
