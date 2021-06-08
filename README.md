@@ -32,4 +32,12 @@ hugo
 This will generate `public` directory containing website
 ready for deployment on production
 
-## Production run
+## Production deploy (Docker)
+
+> Note: Make sure to build for production before create docker
+> container
+
+1. Upgrade image tag in `docker.production/docker-compose.yml`
+2. Use docker compose to start website container: `docker-compose up -d`
+    - This will build image, tag it with new version and will start
+      the container

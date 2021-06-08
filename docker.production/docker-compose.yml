@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  website-nginx:
+    build:
+      context: ../
+      dockerfile: ./docker.production/website-nginx.docker
+    image: website-prod-nginx:1.0
+    container_name: website-prod-nginx
+    ports:
+      - "8080:80"
+    restart: always
