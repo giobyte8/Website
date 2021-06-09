@@ -6,10 +6,42 @@
 {{ end }}
 
 {{ define "scripts" }}
+    
+    <!-- Use CDN for react in prod -->
+    {{ if hugo.IsProduction }}
+        <h3>Prod</h3>
+        <script crossorigin
+            src="https://unpkg.com/react@17/umd/react.production.min.js"
+        ></script>
+        <script crossorigin
+            src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"
+        ></script>
+    {{ end }}
+
+    <!-- Default javascript params -->
+    {{ $js := resources.Get "js/GithubProjects/FeaturedProjects.jsx" }}
     {{ $GH_KEY := getenv "HUGO_GITHUB_AUTH_KEY" }}
     {{ $jsParams := (dict "params" (dict "GH_KEY" $GH_KEY)) }}
-    {{ $js := resources.Get "js/GithubProjects/FeaturedProjects.jsx" }}
-    {{ $js := $js | js.Build $jsParams  }}
 
-    <script src="{{ $js.Permalink }}"></script>
+    <!-- Setup esbuild for prod env  -->
+    {{ if hugo.IsProduction }}
+        {{ $jsParams := merge $jsParams (dict 
+            "minify" true
+            "shims" (dict
+                "react" "js/shims/react.js"
+                "react-dom" "js/shims/react-dom.js"
+            )
+           )
+        }}
+
+        <!-- Build javascript -->
+        {{ $js := $js | js.Build $jsParams  }}
+        <script src="{{ $js.RelPermalink }}"></script>
+    {{ else }}
+        
+        <!-- Build js with dev params only -->
+        {{ $js := $js | js.Build $jsParams  }}
+        <script src="{{ $js.RelPermalink }}"></script>
+    {{ end }}
+
 {{ end }}
