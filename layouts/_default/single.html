@@ -2,7 +2,7 @@
     {{ $syntaxCss := resources.Get "scss/syntax.scss" | resources.ToCSS }}
     {{ $syntaxCss := $syntaxCss | resources.Minify | resources.Fingerprint }}
 
-    <link rel="stylesheet" href="{{ $syntaxCss.Permalink }}">
+    <link rel="stylesheet" href="{{ $syntaxCss.RelPermalink }}">
 {{ end }}
 
 {{ define "main" }}
