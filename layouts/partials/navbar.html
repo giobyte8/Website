@@ -1,0 +1,41 @@
+
+<nav class="navbar navbar-expand-md navbar-light sticky-top">
+    {{ $homeMenuItem := index .Site.Menus.main 0 }}
+    <a class="navbar-brand" href="{{ $homeMenuItem.URL }}">
+        {{ $homeMenuItem.Title }}
+    </a>
+
+    <div id="navbar-links-container"
+        class="collapse navbar-collapse"
+    >
+        <ul class="navbar-nav ms-auto pt-1 pe-3 pe-md-0 mb-3 mb-md-0">
+            {{ $currPage := . }}
+            {{ range after 1 .Site.Menus.main }}
+                <li class="nav-item">
+                    <a 
+                        href="{{ .URL }}"
+                        class="
+                            nav-link
+                            text-end
+                            text-md-start
+                            {{ if $currPage.IsMenuCurrent "main" . }}active{{ end }}"
+                    >
+                        {{ .Title }}
+                    </a>
+                </li>
+            {{ end }}
+        </ul>
+    </div>
+
+    <button
+        class="navbar-toggler ms-auto"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbar-links-container"
+        aria-controls="navbar-links-container"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+    >
+        <span class="navbar-toggler-icon"></span>
+    </button>
+</nav>

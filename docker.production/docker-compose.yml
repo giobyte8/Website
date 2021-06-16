@@ -1,23 +1,12 @@
 version: '3'
 
 services:
-  web:
+  website-nginx:
     build:
       context: ../
-      dockerfile: ./docker.production/web.docker
-    image: gcr.io/gioawesomesite/website-prod-web:1.4
-    container_name: website-prod-web
+      dockerfile: ./docker.production/website-nginx.docker
+    image: website-prod-nginx:1.0
+    container_name: website-prod-nginx
     ports:
-      - "81:80"
-    links:
-      - django-service
-    restart: always
-  
-  django-service:
-    build:
-      context: ../
-      dockerfile: ./docker.production/app.docker
-    image: gcr.io/gioawesomesite/website-prod-app:1.7
-    container_name: website-prod-app
-    command: /bin/sh -c "cd website && gunicorn --bind=0.0.0.0:80 website.wsgi:application"
+      - "8080:80"
     restart: always

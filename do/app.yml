@@ -1,0 +1,10 @@
+name: website
+region: nyc
+static_sites:
+- name: website
+  github:
+    branch: master
+    deploy_on_push: true
+    repo: giobyte8/Website
+  dockerfile_path: do/build.docker
+  output_dir: /app/public

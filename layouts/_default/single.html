@@ -1,0 +1,22 @@
+{{ define "styles" }}
+    {{ $syntaxCss := resources.Get "scss/syntax.scss" | resources.ToCSS }}
+    {{ $syntaxCss := $syntaxCss | resources.Minify | resources.Fingerprint }}
+
+    <link rel="stylesheet" href="{{ $syntaxCss.RelPermalink }}">
+{{ end }}
+
+{{ define "main" }}
+    <div class="container">
+        {{ partial "navbar.html" . }}
+
+        <div class="row pt-5">
+            <div class="col col-lg-10 offset-lg-1 col-xl-8 offset-xl-2">
+                <h1 class="text-center mb-5">{{ .Title }}</h1>
+
+                <div class="content-wrapper">
+                    {{ .Content }}
+                </div>
+            </div>
+        </div>
+    </div>
+{{ end }}

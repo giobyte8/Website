@@ -1,0 +1,31 @@
+baseURL: http://localhost
+languageCode: en-us
+title: Giovanni Aguirre
+
+menu:
+  main:
+  - identifier: home
+    title: Giovanni Aguirre
+    url: /
+    weight: 1
+  - identifier: blog
+    title: Blog
+    url: /blog/
+    weight: 2
+  - identifier: contact
+    title: Contact
+    url: /contact/
+    weight: 2
+
+markup:
+  highlight:
+    codeFences: true
+    lineNos: false
+    lineNumbersInTable: true
+    noClasses: false
+
+    # Styles declared in assets/scss/syntax.css
+    style: native
+
+pygmentsUseClasses: true
+pygmentsCodefences: true
