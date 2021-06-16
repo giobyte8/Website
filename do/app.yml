@@ -8,6 +8,3 @@ static_sites:
     repo: giobyte8/Website
   dockerfile_path: do/build.docker
   output_dir: /app/public
-  routes:
-  - path: /
-  source_dir: /
