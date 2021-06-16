@@ -3,4 +3,4 @@ FROM klakegg/hugo:ext-alpine
 COPY . /app
 WORKDIR /app
 
-RUN npm install && hugo
+RUN npm install && hugo -e production
