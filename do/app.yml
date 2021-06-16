@@ -3,7 +3,7 @@ region: nyc
 static_sites:
 - name: website
   github:
-    branch: hugodev
+    branch: master
     deploy_on_push: true
     repo: giobyte8/Website
   dockerfile_path: do/build.docker
