@@ -1,5 +1,5 @@
 {{ define "styles" }}
-    {{ $syntaxCss := resources.Get "scss/syntax.scss" | resources.ToCSS }}
+    {{ $syntaxCss := resources.Get "scss/syntax.scss" | css.Sass }}
     {{ $syntaxCss := $syntaxCss | resources.Minify | resources.Fingerprint }}
 
     <link rel="stylesheet" href="{{ $syntaxCss.RelPermalink }}">
