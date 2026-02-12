@@ -1,4 +1,4 @@
-FROM klakegg/hugo:ext-alpine
+FROM ghcr.io/gohugoio/hugo:latest
 
 COPY . /app
 WORKDIR /app
