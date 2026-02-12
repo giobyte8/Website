@@ -9,7 +9,7 @@
   <title>Diana Lau</title>
 
   {{/* Page-specific styles for this experiment only */}}
-  {{ $lvStyle := resources.Get "laura_valentine.scss" | css.Sass | resources.Minify | resources.Fingerprint }}
+  {{ $lvStyle := resources.Get "laura_valentine.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
   <link rel="stylesheet" href="{{ $lvStyle.RelPermalink }}" />
 
   {{ with .Params.head }}{{ . | safeHTML }}{{ end }}
