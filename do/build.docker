@@ -1,4 +1,4 @@
-FROM klakegg/hugo:ext-alpine
+FROM ghcr.io/gohugoio/hugo:v0.155.3
 
 COPY . /app
 WORKDIR /app
