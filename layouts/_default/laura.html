@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💘</text></svg>" />
+  <title>Diana Lau</title>
+
+  {{/* Page-specific styles for this experiment only */}}
+  {{ $lvStyle := resources.Get "laura_valentine.scss" | css.Sass | resources.Minify | resources.Fingerprint }}
+  <link rel="stylesheet" href="{{ $lvStyle.RelPermalink }}" />
+
+  {{ with .Params.head }}{{ . | safeHTML }}{{ end }}
+</head>
+<body>
+  {{ .Content }}
+
+  <script>
+    (function () {
+      function clamp(n, min, max) {
+        return Math.max(min, Math.min(max, n));
+      }
+
+      function randInt(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+
+      function setMessage(el, text) {
+        if (!el) return;
+        el.hidden = false;
+        el.textContent = text;
+      }
+
+      function init() {
+        const actionsContainer = document.querySelector('.actions');
+
+        const noContainer = document.getElementById('no-container');
+        const nope = document.getElementById('lv-no');
+        const yes = document.getElementById('lv-yes');
+        const msg = document.getElementById('lv-message');
+        const yesMedia = document.getElementById('lv-yes-media');
+        const yesImg = document.getElementById('lv-yes-img');
+
+        if (!noContainer || !nope || !yes) return;
+
+        // Keep Nope in normal flow until we compute its initial offset.
+        // This prevents the first paint from using (0,0) absolute coords.
+        nope.style.position = 'static';
+        nope.style.left = '';
+        nope.style.top = '';
+
+        const originalNoText = (nope.textContent || '').trim() || 'Nope';
+        const nopeWithEyes = originalNoText.endsWith('👀') ? originalNoText : `${originalNoText} 👀`;
+
+        const actionsRect = () => noContainer.getBoundingClientRect();
+
+        let originalLeft = null;
+        let originalTop = null;
+        let resetTimer = null;
+
+        function scheduleReset() {
+          if (resetTimer) window.clearTimeout(resetTimer);
+          resetTimer = window.setTimeout(() => {
+            if (originalLeft == null || originalTop == null) return;
+            nope.style.left = originalLeft + 'px';
+            nope.style.top = originalTop + 'px';
+            nope.textContent = originalNoText;
+          }, 5000);
+        }
+
+        function ensureAbsolutePositioning() {
+          const aRect = actionsRect();
+          const nRect = nope.getBoundingClientRect();
+          const left = nRect.left - aRect.left;
+          const top = nRect.top - aRect.top;
+
+          nope.style.position = 'absolute';
+          nope.style.left = left + 'px';
+          nope.style.top = top + 'px';
+
+          if (originalLeft == null || originalTop == null) {
+            originalLeft = left;
+            originalTop = top;
+          }
+        }
+
+        // Wait for layout to settle before measuring; double-rAF is a common
+        // pattern to ensure styles/fonts/layout have been applied.
+        requestAnimationFrame(() => requestAnimationFrame(ensureAbsolutePositioning));
+
+        let lastMove = 0;
+        function moveNopeAway(pointerX, pointerY) {
+          const now = Date.now();
+          if (now - lastMove < 80) return;
+          lastMove = now;
+
+          // Add personality once it starts dodging.
+          if (nope.textContent.trim() !== nopeWithEyes) {
+            nope.textContent = nopeWithEyes;
+          }
+
+          const aRect = actionsRect();
+          const nRect = nope.getBoundingClientRect();
+
+          const curLeft = parseFloat(nope.style.left || '0');
+          const curTop = parseFloat(nope.style.top || '0');
+
+          const btnCenterX = (nRect.left - aRect.left) + nRect.width / 2;
+          const btnCenterY = (nRect.top - aRect.top) + nRect.height / 2;
+
+          const dx = btnCenterX - (pointerX - aRect.left);
+          const dy = btnCenterY - (pointerY - aRect.top);
+
+          const step = 70;
+          const jitter = 30;
+
+          const dirX = dx === 0 ? (Math.random() < 0.5 ? -1 : 1) : Math.sign(dx);
+          const dirY = dy === 0 ? (Math.random() < 0.5 ? -1 : 1) : Math.sign(dy);
+
+          let nextLeft = curLeft + dirX * step + randInt(-jitter, jitter);
+          let nextTop = curTop + dirY * step + randInt(-jitter, jitter);
+
+          const maxLeft = aRect.width - (nRect.width + 5);
+          const maxTop = aRect.height - nRect.height;
+
+          nextLeft = clamp(nextLeft, 0, maxLeft);
+          nextTop = clamp(nextTop, 0, maxTop);
+
+          if (nextLeft === curLeft && nextTop === curTop) {
+            nextLeft = clamp(curLeft + randInt(-120, 120), 0, maxLeft);
+            nextTop = clamp(curTop + randInt(-90, 90), 0, maxTop);
+          }
+
+          nope.style.left = nextLeft + 'px';
+          nope.style.top = nextTop + 'px';
+
+          scheduleReset();
+        }
+
+        function onMouseMove(e) {
+          const aRect = actionsRect();
+          const nRect = nope.getBoundingClientRect();
+          const x = e.clientX;
+          const y = e.clientY;
+
+          const padding = 40;
+          const near =
+            x >= nRect.left - padding &&
+            x <= nRect.right + padding &&
+            y >= nRect.top - padding &&
+            y <= nRect.bottom + padding;
+
+          const insideActions =
+            x >= aRect.left && x <= aRect.right && y >= aRect.top && y <= aRect.bottom;
+
+          if (insideActions && near) moveNopeAway(x, y);
+        }
+
+        noContainer.addEventListener('mousemove', onMouseMove, { passive: true });
+
+        noContainer.addEventListener(
+          'touchstart',
+          (e) => {
+            const t = e.touches && e.touches[0];
+            if (!t) return;
+            moveNopeAway(t.clientX, t.clientY);
+          },
+          { passive: true }
+        );
+
+        nope.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          const aRect = actionsRect();
+          moveNopeAway(aRect.left + aRect.width / 2, aRect.top + aRect.height / 2);
+          //setMessage(msg, 'Nice try 😄');
+        });
+
+        yes.addEventListener('click', () => {
+          setMessage(msg, 'Yay! 💖');
+
+          actionsContainer.hidden = true;
+          actionsContainer.style.display = 'none';
+
+          if (yesMedia) yesMedia.hidden = false;
+          if (yesImg) {
+            // Placeholder – you can swap this to any local /static gif later.
+            yesImg.src = 'https://media.giphy.com/media/3oz8xAFtqoOUUrsh7W/giphy.gif';
+            yesImg.alt = 'Happy dance';
+          }
+        });
+
+        window.addEventListener('resize', () => {
+          const aRect = actionsRect();
+          const nRect = nope.getBoundingClientRect();
+
+          const maxLeft = aRect.width - nRect.width;
+          const maxTop = aRect.height - nRect.height;
+
+          const curLeft = clamp(parseFloat(nope.style.left || '0'), 0, maxLeft);
+          const curTop = clamp(parseFloat(nope.style.top || '0'), 0, maxTop);
+
+          nope.style.left = curLeft + 'px';
+          nope.style.top = curTop + 'px';
+        });
+
+        scheduleReset();
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+      } else {
+        init();
+      }
+    })();
+  </script>
+
+  {{ with .Params.scripts }}{{ . | safeHTML }}{{ end }}
+</body>
+</html>
