@@ -102,14 +102,29 @@ body {
 
 .lv-yes-media {
   margin-top: 14px;
-  display: flex;
+  display: none;
   justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.lv-yes-media[hidden] {
+  display: none !important;
 }
 
 .lv-yes-img {
-  width: 100%;
-  max-width: 320px;
+  height: 240px;
+  width: auto;
+  max-width: 100%;
   border-radius: 12px;
+  display: block;
+}
+
+// When two GIFs are present, keep them from getting too large on wide screens.
+#lv-yes-media .lv-yes-img {
+  flex: 0 1 auto;
+  max-width: 320px;
 }
 
 .actions {
@@ -132,8 +147,64 @@ body {
   position: relative;
 }
 
+.lv-photo-grid {
+  margin-top: 64px;
+  display: none;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 3800ms ease, transform 3800ms ease;
+  transition-delay: 1500ms;
+}
+
+.lv-photo-grid.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lv-photo-grid {
+    transition: none;
+    transform: none;
+  }
+}
+
+.lv-photo-grid[hidden] {
+  display: none !important;
+}
+
+.lv-subtitle {
+  margin: 8px 0 12px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.lv-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.lv-photo {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 640px) {
+  .lv-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 420px) {
   .lv-actions {
+    height: 200px;
+  }
+
+  #lv-yes-media .lv-yes-img {
     height: 200px;
   }
 }
