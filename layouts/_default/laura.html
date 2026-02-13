@@ -118,25 +118,65 @@
           const step = 70;
           const jitter = 30;
 
-          const dirX = dx === 0 ? (Math.random() < 0.5 ? -1 : 1) : Math.sign(dx);
-          const dirY = dy === 0 ? (Math.random() < 0.5 ? -1 : 1) : Math.sign(dy);
+          const baseDirX = dx === 0 ? (Math.random() < 0.5 ? -1 : 1) : Math.sign(dx);
+          const baseDirY = dy === 0 ? (Math.random() < 0.5 ? -1 : 1) : Math.sign(dy);
 
-          let nextLeft = curLeft + dirX * step + randInt(-jitter, jitter);
-          let nextTop = curTop + dirY * step + randInt(-jitter, jitter);
+          const maxLeft = Math.max(0, aRect.width - (nRect.width + 5));
+          const maxTop = Math.max(0, aRect.height - nRect.height);
 
-          const maxLeft = aRect.width - (nRect.width + 5);
-          const maxTop = aRect.height - nRect.height;
-
-          nextLeft = clamp(nextLeft, 0, maxLeft);
-          nextTop = clamp(nextTop, 0, maxTop);
-
-          if (nextLeft === curLeft && nextTop === curTop) {
-            nextLeft = clamp(curLeft + randInt(-120, 120), 0, maxLeft);
-            nextTop = clamp(curTop + randInt(-90, 90), 0, maxTop);
+          function propose(dirX, dirY, extraJitter = jitter) {
+            const rawLeft = curLeft + dirX * step + randInt(-extraJitter, extraJitter);
+            const rawTop = curTop + dirY * step + randInt(-extraJitter, extraJitter);
+            return {
+              rawLeft,
+              rawTop,
+              left: clamp(rawLeft, 0, maxLeft),
+              top: clamp(rawTop, 0, maxTop),
+            };
           }
 
-          nope.style.left = nextLeft + 'px';
-          nope.style.top = nextTop + 'px';
+          let move = propose(baseDirX, baseDirY);
+
+          // If the intended move pushes into a boundary (edge/corner), clamping may
+          // make it "stick". Flip the blocked axis so it runs back toward the interior.
+          const blockedX = move.left === curLeft && (move.rawLeft < 0 || move.rawLeft > maxLeft);
+          const blockedY = move.top === curTop && (move.rawTop < 0 || move.rawTop > maxTop);
+
+          if (blockedX || blockedY) {
+            move = propose(blockedX ? -baseDirX : baseDirX, blockedY ? -baseDirY : baseDirY);
+          }
+
+          // Still stuck? Try alternate direction combinations.
+          if (move.left === curLeft && move.top === curTop) {
+            const candidates = [
+              [baseDirX, -baseDirY],
+              [-baseDirX, baseDirY],
+              [-baseDirX, -baseDirY],
+              [baseDirX, 0],
+              [0, baseDirY],
+              [-baseDirX, 0],
+              [0, -baseDirY],
+            ];
+
+            for (const [cx, cy] of candidates) {
+              const cand = propose(cx, cy, jitter + 10);
+              if (cand.left !== curLeft || cand.top !== curTop) {
+                move = cand;
+                break;
+              }
+            }
+          }
+
+          // Last resort: bigger random nudge.
+          if (move.left === curLeft && move.top === curTop) {
+            move = {
+              left: clamp(curLeft + randInt(-160, 160), 0, maxLeft),
+              top: clamp(curTop + randInt(-130, 130), 0, maxTop),
+            };
+          }
+
+          nope.style.left = move.left + 'px';
+          nope.style.top = move.top + 'px';
 
           scheduleReset();
         }
@@ -177,7 +217,7 @@
           e.stopPropagation();
           const aRect = actionsRect();
           moveNopeAway(aRect.left + aRect.width / 2, aRect.top + aRect.height / 2);
-          setMessage(msg, '💔 Try again! Love me please 🥺');
+          //setMessage(msg, '💔 Try again! Love me please 🥺');
         });
 
         yes.addEventListener('click', () => {
