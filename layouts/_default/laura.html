@@ -42,6 +42,8 @@
         const msg = document.getElementById('lv-message');
         const yesMedia = document.getElementById('lv-yes-media');
         const yesImg = document.getElementById('lv-yes-img');
+        const yesImg2 = document.getElementById('lv-yes-img-2');
+        const photoGrid = document.getElementById('lv-photo-grid');
 
         if (!noContainer || !nope || !yes) return;
 
@@ -175,20 +177,36 @@
           e.stopPropagation();
           const aRect = actionsRect();
           moveNopeAway(aRect.left + aRect.width / 2, aRect.top + aRect.height / 2);
-          //setMessage(msg, 'Nice try 😄');
+          setMessage(msg, '💔 Try again! Love me please 🥺');
         });
 
         yes.addEventListener('click', () => {
-          setMessage(msg, 'Yay! 💖');
+          setMessage(msg, 'Yaaaaay! 💖');
 
           actionsContainer.hidden = true;
           actionsContainer.style.display = 'none';
 
-          if (yesMedia) yesMedia.hidden = false;
+          if (yesMedia) {
+            yesMedia.hidden = false;
+            yesMedia.style.display = 'flex';
+          }
+
+          if (photoGrid) {
+            photoGrid.hidden = false;
+            photoGrid.style.display = 'block';
+            photoGrid.classList.remove('is-visible');
+            requestAnimationFrame(() => photoGrid.classList.add('is-visible'));
+          }
+
           if (yesImg) {
             // Placeholder – you can swap this to any local /static gif later.
             yesImg.src = 'https://media.giphy.com/media/3oz8xAFtqoOUUrsh7W/giphy.gif';
             yesImg.alt = 'Happy dance';
+          }
+
+          if (yesImg2) {
+            yesImg2.src = 'https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGN5dnc4bTN3eG84d2N1bncwNmdvNHg0Ympuc2FvNXhlN2hkajBoYyZlcD12MV9pbnRlcm5naWZfYnlfaWQmY3Q9Zw/zSo2z2t8vNJo6YFEkd/giphy.gif';
+            yesImg2.alt = 'So much love';
           }
         });
 
